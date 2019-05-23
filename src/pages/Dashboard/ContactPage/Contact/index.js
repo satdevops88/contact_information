@@ -85,6 +85,7 @@ class Contact extends React.Component {
 			let self = this;
 			setTimeout(() => {
         self.setState({ loading: false, users_list });
+        this.filterData('');
         notification.open({
           type: 'success',
           message: 'Added Successfully!',
