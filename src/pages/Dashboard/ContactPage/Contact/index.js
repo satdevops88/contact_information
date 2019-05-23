@@ -60,7 +60,7 @@ class Contact extends React.Component {
 
   toggle = (id) => {
     const {expand_id} = this.state;
-    if (expand_id == id)
+    if (expand_id === id)
       id = 0;
     this.setState({expand_id: id});
   };

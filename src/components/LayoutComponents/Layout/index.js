@@ -3,20 +3,14 @@ import PropTypes from 'prop-types'
 import { Spinner } from 'react-redux-spinner'
 import { BackTop, Layout as AntLayout } from 'antd'
 import Routes from 'routes'
-import TopBar from 'components/LayoutComponents/TopBar'
-import Footer from 'components/LayoutComponents/Footer'
-import Menu from 'components/LayoutComponents/Menu'
 import Content from 'components/LayoutComponents/Content'
 import Loader from 'components/LayoutComponents/Loader'
 import LayoutState from 'components/LayoutComponents/LayoutState'
-import SettingsSider from 'components/LayoutComponents/SettingsSider'
 import { enquireScreen, unenquireScreen } from 'enquire-js'
 import { ContainerQuery } from 'react-container-query'
 import classNames from 'classnames'
 
 const AntContent = AntLayout.Content
-const AntHeader = AntLayout.Header
-const AntFooter = AntLayout.Footer
 
 const query = {
   'screen-xs': {
@@ -94,7 +88,6 @@ class Layout extends React.Component {
               <Spinner />
               <BackTop />
               <Routes />
-              <SettingsSider />
               <AntLayout>
                 <AntContent style={{ height: '100%' }}>
                   <Content />
